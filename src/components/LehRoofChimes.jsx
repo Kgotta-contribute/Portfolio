@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import roofLeh from '../assets/chimes/roof-leh.png';
+import roofLeh from '../assets/chimes/roof-leh2.png';
 import shadowSvg from '../assets/chimes/shadow.svg';
 import bgTexture from '../assets/chimes/bg.png';
 
@@ -565,22 +565,22 @@ const LehRoofChimes = () => {
           {/* Central Scene Stage */}
           <div ref={containerRef} className="relative w-full flex flex-col items-center justify-start overflow-visible">
             
-            {/* 1. Authentic Leh Temple Roof (Cropped to visible roof ridge and eaves, eliminating all transparent space) */}
-            <div className="relative z-[3] w-[500px] sm:w-[560px] max-w-[95vw] h-[210px] sm:h-[238px] overflow-hidden pointer-events-none drop-shadow-2xl">
+            {/* 1. Authentic Leh Temple Roof */}
+            <div className="relative z-[3] w-[500px] sm:w-[560px] max-w-[95vw] pointer-events-none drop-shadow-2xl">
               <img 
                 src={roofLeh} 
                 alt="Traditional Leh Temple Roof" 
-                className="w-full h-auto object-contain pointer-events-none select-none -mt-[17.5%] sm:-mt-[18%]"
+                className="w-full h-auto object-contain pointer-events-none select-none block"
               />
             </div>
 
             {/* 2. Soft Drop Shadow Behind Curtain */}
-            <div className="absolute top-[200px] sm:top-[228px] left-1/2 -translate-x-1/2 w-[520px] h-[440px] pointer-events-none z-[1] opacity-75">
+            <div className="absolute top-[240px] sm:top-[270px] left-1/2 -translate-x-1/2 w-[520px] h-[440px] pointer-events-none z-[1] opacity-75">
               <img src={shadowSvg} alt="" className="w-full h-full object-fill filter blur-sm" />
             </div>
 
-            {/* 3. Wide Letter Curtain Canvas (Z-Index 2) stuck directly to the bottom eave */}
-            <div className="relative z-[2] cursor-grab active:cursor-grabbing flex justify-center -mt-2 sm:-mt-3">
+            {/* 3. Wide Letter Curtain Canvas (Z-Index 2) hanging directly below the lower eaves */}
+            <div className="relative z-[2] cursor-grab active:cursor-grabbing flex justify-center -mt-3 sm:-mt-4">
               <canvas 
                 ref={canvasRef} 
                 className="touch-none block max-w-full"
