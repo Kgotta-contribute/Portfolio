@@ -18,10 +18,10 @@
 
 ## 🚀 Featured Projects
 
-### 01 · Agentic Recruitment Intelligence Platform
+### 01 · [Agentic Recruitment Intelligence Platform](https://chhavi-6agents-graph.vercel.app/)
 > 6-agent hiring platform that extracts JDs, parses resumes, verifies claims against GitHub, and ranks candidates with a deterministic 5-factor engine. Built with FastAPI, LangGraph, Groq, pgvector and MCP.
 
-`FastAPI` `LangGraph` `Groq` `pgvector` `MCP` `Python`
+`FastAPI` `LangGraph` `Groq` `pgvector` `MCP` `Python` · [Frontend GitHub](https://github.com/Kgotta-contribute/TalentGraphFrontend)
 
 ---
 

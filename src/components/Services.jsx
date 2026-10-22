@@ -530,7 +530,11 @@ const Services = () => {
             title="Agentic Recruitment Intelligence Platform"
             text="6-agent hiring platform that extracts JDs, parses resumes, verifies claims against GitHub, and ranks candidates with a deterministic 5-factor engine. Built with FastAPI, LangGraph, Groq, pgvector and MCP."
             image={talentGraphImg}
+            link="https://github.com/Kgotta-contribute/TalentGraphFrontend"
+            linkText="View on GitHub"
             architectureAction={() => setArchModalKey('talent')}
+            liveLink="https://chhavi-6agents-graph.vercel.app/"
+            liveLinkText="TalentGraph"
             className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
             aosType="fade-left"
             aosDelay="100"
