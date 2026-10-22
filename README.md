@@ -18,28 +18,35 @@
 
 ## 🚀 Featured Projects
 
-### 01 · [Multilingual Audio Intelligence & Conversational RAG Platform](https://github.com/Kgotta-contribute/Multilingual-Audio-Intelligence-Conversational-RAG-Platform)
+### 01 · Agentic Recruitment Intelligence Platform
+> 6-agent hiring platform that extracts JDs, parses resumes, verifies claims against GitHub, and ranks candidates with a deterministic 5-factor engine. Built with FastAPI, LangGraph, Groq, pgvector and MCP.
+
+`FastAPI` `LangGraph` `Groq` `pgvector` `MCP` `Python`
+
+---
+
+### 02 · [Multilingual Audio Intelligence & Conversational RAG Platform](https://github.com/Kgotta-contribute/Multilingual-Audio-Intelligence-Conversational-RAG-Platform)
 > Converts long-form audio/video into speaker-aware transcripts with two-stage RAG using BGE-M3 embeddings, cross-encoder reranking, and Qwen/GPT-OSS reasoning.
 
 `Whisper Large-v3` `LLaMA 3.3 70B` `BGE-M3` `FastAPI` `React 18` `Python`
 
 ---
 
-### 02 · [LLM Chef — AI-Powered Culinary Assistant](https://chhavi-verma-llm-chef.vercel.app/)
+### 03 · [LLM Chef — AI-Powered Culinary Assistant](https://chhavi-verma-llm-chef.vercel.app/)
 > Generates personalized recipes, tracks macronutrients, scales ingredient portions dynamically with voice-guided cooking and print-ready recipe exports.
 
 `React 19` `Vite` `LangChain` `Gemini Flash` `FastAPI` `Web Speech API`
 
 ---
 
-### 03 · [HG's Stock Prediction](https://chhavi-verma-llm-stock-predict.vercel.app/)
+### 04 · [HG's Stock Prediction](https://chhavi-verma-llm-stock-predict.vercel.app/)
 > Multi-persona AI stock analysis with real-time chunked streaming, Polygon.io OHLC data, and dynamic SVG sparklines.
 
 `Vanilla ES6` `Vercel Serverless` `Qwen 2.5 72B` `Polygon.io` `ReadableStream`
 
 ---
 
-### 04 · [This Portfolio Website](https://chhavi-verma-portfolio.vercel.app)
+### 05 · [This Portfolio Website](https://chhavi-verma-portfolio.vercel.app)
 > Interactive portfolio with 60FPS physics-based Tibetan chimes, Framer Motion scroll orchestration, and real-time ScrollSpy URL synchronization.
 
 `React 18` `Framer Motion` `Tailwind CSS` `Web Audio API` `HTML5 Canvas` `Vite`

@@ -1,11 +1,68 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
+import talentGraphImg from '../assets/talent_graph.png';
 import clarityAiImg from '../assets/clarity_ai.png';
 import chefLlamaImg from '../assets/chef_llama.png';
 import hermioneStockImg from '../assets/hermione_stock.png';
 import portfolioCreationImg from '../assets/portfolio_creation.jpg';
 
 const ARCHITECTURES = {
+  talent: {
+    title: 'Agentic Recruitment Intelligence Platform (TalentGraph)',
+    badge: '⚡ SYSTEM ARCHITECTURE',
+    ascii: `┌─────────────────────────────────────────────────────────────┐
+│                    1. INGESTION & PARSING                   │
+│   Job Description / Resumes ──► Pydantic Schemas ──► Groq   │
+│   (PDF/Docx Multi-Format)       (Strict JSON Guard)  (Fast) │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│              2. 6-AGENT LANGGRAPH RECRUITMENT GRAPH         │
+│  JD Extractor ──► Resume Parser ──► GitHub Verifier (MCP)   │
+│  Candidate Screener ──► Scoring Engine ──► Summary Reporter │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│            3. SEMANTIC SEARCH & pgvector MATCHING           │
+│   Candidate Embeddings ──► pgvector HNSW Index ──► Top K    │
+│   (5-Factor Deterministic Engine & Weight Normalization)    │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   4. FULL-STACK INTERACTION                 │
+│   FastAPI Async Endpoints ──► MCP Server ──► Dynamic UI     │
+│   (Streaming Token Feed)      (External Tool Validation)    │
+└─────────────────────────────────────────────────────────────┘`,
+    steps: [
+      {
+        num: '01',
+        title: 'JD & Resume Ingestion',
+        desc: 'FastAPI async ingestion pipeline ➔ Multi-format PDF/text resume parsing ➔ Pydantic validation into structured candidate profile schemas',
+        color: 'text-blue-400 bg-blue-500/10 border-blue-500/20'
+      },
+      {
+        num: '02',
+        title: '6-Agent LangGraph Orchestration',
+        desc: 'LangGraph multi-agent cyclic graph with 6 specialized agents coordinating extraction, parsing, deep candidate screening, and synthesis',
+        color: 'text-purple-400 bg-purple-500/10 border-purple-500/20'
+      },
+      {
+        num: '03',
+        title: 'GitHub Claim Verification via MCP',
+        desc: 'Model Context Protocol (MCP) tool integration querying live GitHub repositories to verify code authenticity, project contributions, and tech stack claims',
+        color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
+      },
+      {
+        num: '04',
+        title: 'Deterministic 5-Factor Ranking & pgvector',
+        desc: 'High-dimensional semantic vector recall via pgvector ➔ Deterministic 5-factor scoring engine ranking top-tier candidate matches with Groq acceleration',
+        color: 'text-amber-400 bg-amber-500/10 border-amber-500/20'
+      }
+    ]
+  },
   clarity: {
     title: 'Multilingual Audio Intelligence & Conversational RAG Platform',
     badge: '⚡ SYSTEM ARCHITECTURE',
@@ -376,7 +433,7 @@ const Services = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-48 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[1850px]">
+      <div className="max-w-6xl mx-auto relative md:h-[2300px]">
         
         {/* Header Content */}
         <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
@@ -394,13 +451,13 @@ const Services = () => {
 
         {/* Desktop SVG Animated Dashed Line */}
         <svg 
-          className="hidden md:block absolute top-0 left-0 w-full h-[1850px] pointer-events-none z-0" 
-          viewBox="0 0 1000 1850" 
+          className="hidden md:block absolute top-0 left-0 w-full h-[2300px] pointer-events-none z-0" 
+          viewBox="0 0 1000 2300" 
           preserveAspectRatio="none"
         >
           {/* Faint background path (optional guide) */}
           <path 
-            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 400,1350 300,1540 C 250,1650 400,1700 450,1750" 
+            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2180 500,2220 520,2260" 
             fill="none" 
             stroke="#cbd5e1" 
             strokeWidth="2" 
@@ -410,7 +467,7 @@ const Services = () => {
           {/* Mask to reveal the dashed path based on scroll */}
           <mask id="path-mask">
             <motion.path 
-              d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 400,1350 300,1540 C 250,1650 400,1700 450,1750" 
+              d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2180 500,2220 520,2260" 
               fill="none" 
               stroke="white" 
               strokeWidth="20" 
@@ -420,7 +477,7 @@ const Services = () => {
 
           {/* The actual dashed line that gets revealed */}
           <path 
-            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 400,1350 300,1540 C 250,1650 400,1700 450,1750" 
+            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2180 500,2220 520,2260" 
             fill="none" 
             stroke="black" 
             strokeWidth="2" 
@@ -470,14 +527,10 @@ const Services = () => {
           
           <TagCard 
             number="01"
-            title="Multilingual Audio Intelligence & Conversational RAG Platform"
-            text="Converts long-form audio/video into speaker-aware transcripts and lets users ask questions using two-stage RAG with BGE-M3 embeddings, cross-encoder reranking, and Qwen/GPT-OSS reasoning, Multilingual Q&A, and with rate limiting and model failover."
-            image={clarityAiImg}
-            link="https://github.com/Kgotta-contribute/Multilingual-Audio-Intelligence-Conversational-RAG-Platform"
-            linkText="View on GitHub"
-            architectureAction={() => setArchModalKey('clarity')}
-            liveLink="https://clarity-ai-puce.vercel.app/"
-            liveLinkText="Clarity AI"
+            title="Agentic Recruitment Intelligence Platform"
+            text="6-agent hiring platform that extracts JDs, parses resumes, verifies claims against GitHub, and ranks candidates with a deterministic 5-factor engine. Built with FastAPI, LangGraph, Groq, pgvector and MCP."
+            image={talentGraphImg}
+            architectureAction={() => setArchModalKey('talent')}
             className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
             aosType="fade-left"
             aosDelay="100"
@@ -487,12 +540,14 @@ const Services = () => {
 
           <TagCard 
             number="02"
-            title="AI-Powered Culinary Assistant"
-            text="Generate personalized recipes, track calories/macronutrients, and scale ingredient portions dynamically. Added secure API validation, voice-guided cooking instructions, and print-ready recipe exports to make the application reliable, interactive, and accessible."
-            image={chefLlamaImg}
-            link="https://chhavi-verma-llm-chef.vercel.app/"
-            linkText="Chef Llama"
-            architectureAction={() => setArchModalKey('chef')}
+            title="Multilingual Audio Intelligence & Conversational RAG Platform"
+            text="Converts long-form audio/video into speaker-aware transcripts and lets users ask questions using two-stage RAG with BGE-M3 embeddings, cross-encoder reranking, and Qwen/GPT-OSS reasoning, Multilingual Q&A, and with rate limiting and model failover."
+            image={clarityAiImg}
+            link="https://github.com/Kgotta-contribute/Multilingual-Audio-Intelligence-Conversational-RAG-Platform"
+            linkText="View on GitHub"
+            architectureAction={() => setArchModalKey('clarity')}
+            liveLink="https://clarity-ai-puce.vercel.app/"
+            liveLinkText="Clarity AI"
             className="md:absolute md:top-[460px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6"
             aosType="fade-right"
             aosDelay="200"
@@ -502,13 +557,13 @@ const Services = () => {
 
           <TagCard 
             number="03"
-            title="HG's Stock Prediction"
-            text="Combines real-time Polygon.io market data with Hugging Face LLMs to generate AI-powered financial summaries. Implemented dual-layer caching, client-side state management, and dynamic SVG-based visualizations to improve performance and reduce API usage."
-            image={hermioneStockImg}
-            link="https://chhavi-verma-llm-stock-predict.vercel.app/"
-            linkText="HG's Stock Prediction"
-            architectureAction={() => setArchModalKey('stock')}
-            className="md:absolute md:top-[900px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
+            title="AI-Powered Culinary Assistant"
+            text="Generate personalized recipes, track calories/macronutrients, and scale ingredient portions dynamically. Added secure API validation, voice-guided cooking instructions, and print-ready recipe exports to make the application reliable, interactive, and accessible."
+            image={chefLlamaImg}
+            link="https://chhavi-verma-llm-chef.vercel.app/"
+            linkText="Chef Llama"
+            architectureAction={() => setArchModalKey('chef')}
+            className="md:absolute md:top-[910px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
             aosType="fade-left"
             aosDelay="300"
             pathLength={pathLength}
@@ -517,13 +572,28 @@ const Services = () => {
 
           <TagCard 
             number="04"
+            title="HG's Stock Prediction"
+            text="Combines real-time Polygon.io market data with Hugging Face LLMs to generate AI-powered financial summaries. Implemented dual-layer caching, client-side state management, and dynamic SVG-based visualizations to improve performance and reduce API usage."
+            image={hermioneStockImg}
+            link="https://chhavi-verma-llm-stock-predict.vercel.app/"
+            linkText="HG's Stock Prediction"
+            architectureAction={() => setArchModalKey('stock')}
+            className="md:absolute md:top-[1360px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-4"
+            aosType="fade-right"
+            aosDelay="400"
+            pathLength={pathLength}
+            containerRef={containerRef}
+          />
+
+          <TagCard 
+            number="05"
             title="Portfolio Website Creation"
             text="Crafting bespoke, high-performance personal brand platforms with interactive 3D physics and smooth kinetic animations. Tailored to captivate visitors, showcase technical depth, and elevate digital presence."
             image={portfolioCreationImg}
             architectureAction={() => setArchModalKey('portfolio')}
-            className="md:absolute md:top-[1340px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
-            aosType="fade-right"
-            aosDelay="400"
+            className="md:absolute md:top-[1800px] md:right-[8%] lg:right-[18%] rotate-1 md:rotate-3"
+            aosType="fade-left"
+            aosDelay="500"
             pathLength={pathLength}
             containerRef={containerRef}
           />
@@ -532,7 +602,7 @@ const Services = () => {
           <div 
             data-aos="fade-in" 
             data-aos-delay="600"
-            className="hidden md:block absolute top-[1750px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            className="hidden md:block absolute top-[2220px] left-[55%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             Ready to be delivered!
           </div>
