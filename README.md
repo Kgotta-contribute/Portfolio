@@ -53,6 +53,13 @@
 
 ---
 
+### 06 · [Lung Cancer AI Detection System | Final Year Project](https://lungai.chhavibuilds.in/)
+> End-to-end CAD pipeline for lung carcinoma on 188K+ PET/CT scans (TCIA). A PyTorch dual-head CNN localizes tumors and classifies 4 subtypes at 92.5% accuracy and 91.77% F1, served via a FastAPI dashboard with bounding-box overlays.
+
+`PyTorch` `Dual-Head CNN` `FastAPI` `Docker` `Cloudflare Zero Trust` `Python`
+
+---
+
 
 
 [![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:ff2a2a,50:c41230,100:0d0d0d&height=120&section=footer)](https://chhavi-verma-portfolio.vercel.app)

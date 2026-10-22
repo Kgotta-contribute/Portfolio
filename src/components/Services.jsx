@@ -5,6 +5,7 @@ import clarityAiImg from '../assets/clarity_ai.png';
 import chefLlamaImg from '../assets/chef_llama.png';
 import hermioneStockImg from '../assets/hermione_stock.png';
 import portfolioCreationImg from '../assets/portfolio_creation.jpg';
+import lungCancerAiImg from '../assets/lung_cancer_ai.png';
 
 const ARCHITECTURES = {
   talent: {
@@ -286,6 +287,65 @@ const ARCHITECTURES = {
         color: 'text-amber-400 bg-amber-500/10 border-amber-500/20'
       }
     ]
+  },
+  lungai: {
+    title: '🫁 Lung Cancer AI — Dual-Head CAD System Architecture',
+    badge: '⚡ SYSTEM ARCHITECTURE',
+    ascii: `┌─────────────────────────────────────────────────────────────┐
+│                 1. REQUEST & INGESTION JOURNEY              │
+│   Browser (CT Scan Upload) ──► Cloudflare (HTTPS + DDoS)    │
+│   ──► Cloudflare Tunnel (Zero Trust) ──► Docker (Port 8000) │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│            2. FASTAPI GATEWAY & DICOM / PNG PIPELINE        │
+│   FastAPI (POST /predict) ──► Lung-Window (-600/1500 HU)    │
+│   ──► Rescale (512x512) ──► PyTorch Tensor Normalization    │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│           3. DUAL-HEAD PYTORCH CNN INFERENCE (27 MB)        │
+│   ┌───────────────────────────┬───────────────────────────┐ │
+│   │   🎯 DETECTION HEAD       │  🔬 CLASSIFICATION HEAD   │ │
+│   │   Bounding Box Regression │  4 Histological Subtypes  │ │
+│   │   [xmin, ymin, xmax, ymax]│  (Adeno/Squamous/Large/Sm)│ │
+│   └───────────────────────────┴───────────────────────────┘ │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────┐
+│           4. STRUCTURED PREDICTION OUTPUT & ANALYTICS       │
+│   JSON Output: Class + Bounding Box Coordinates + Conf %    │
+│   Metrics: 92.5% Accuracy │ 91.77% F1 │ 27MB Model │ $0/mo  │
+└─────────────────────────────────────────────────────────────┘`,
+    steps: [
+      {
+        num: '01',
+        title: 'Zero-Trust Secure Ingestion Journey',
+        desc: 'Browser CT scan upload ➔ Cloudflare CDN & DDoS shield ➔ Cloudflare Tunnel (zero open ports) ➔ Containerized Docker on Port 8000',
+        color: 'text-blue-400 bg-blue-500/10 border-blue-500/20'
+      },
+      {
+        num: '02',
+        title: 'FastAPI Preprocessing & Lung Windowing',
+        desc: 'FastAPI /predict endpoint ➔ Hounsfield Unit (HU) windowing (-600 center, 1500 width) for pulmonary tissue contrast ➔ 512x512 tensor conversion',
+        color: 'text-purple-400 bg-purple-500/10 border-purple-500/20'
+      },
+      {
+        num: '03',
+        title: 'Dual-Head CNN Inference (27 MB)',
+        desc: 'Parallel execution: Detection Head regresses precise bounding box coordinates; Classification Head predicts subtype (Adeno, Squamous, Large Cell, Small Cell)',
+        color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20'
+      },
+      {
+        num: '04',
+        title: 'Clinical Output & High Performance',
+        desc: 'High-speed JSON payload returning bounding box overlays and confidence % with 92.5% accuracy, 91.77% F1 score, and $0/mo hosting footprint',
+        color: 'text-amber-400 bg-amber-500/10 border-amber-500/20'
+      }
+    ]
   }
 };
 
@@ -433,7 +493,7 @@ const Services = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-48 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[2300px]">
+      <div className="max-w-6xl mx-auto relative md:h-[2750px]">
         
         {/* Header Content */}
         <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
@@ -451,13 +511,13 @@ const Services = () => {
 
         {/* Desktop SVG Animated Dashed Line */}
         <svg 
-          className="hidden md:block absolute top-0 left-0 w-full h-[2300px] pointer-events-none z-0" 
-          viewBox="0 0 1000 2300" 
+          className="hidden md:block absolute top-0 left-0 w-full h-[2750px] pointer-events-none z-0" 
+          viewBox="0 0 1000 2750" 
           preserveAspectRatio="none"
         >
           {/* Faint background path (optional guide) */}
           <path 
-            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2180 500,2220 520,2260" 
+            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2220 320,2260 300,2460 C 290,2580 460,2640 500,2700" 
             fill="none" 
             stroke="#cbd5e1" 
             strokeWidth="2" 
@@ -467,7 +527,7 @@ const Services = () => {
           {/* Mask to reveal the dashed path based on scroll */}
           <mask id="path-mask">
             <motion.path 
-              d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2180 500,2220 520,2260" 
+              d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2220 320,2260 300,2460 C 290,2580 460,2640 500,2700" 
               fill="none" 
               stroke="white" 
               strokeWidth="20" 
@@ -477,7 +537,7 @@ const Services = () => {
 
           {/* The actual dashed line that gets revealed */}
           <path 
-            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2180 500,2220 520,2260" 
+            d="M 650,220 C 400,320 200,450 300,680 C 400,900 750,900 700,1120 C 650,1350 350,1380 320,1580 C 300,1780 720,1820 680,2020 C 640,2220 320,2260 300,2460 C 290,2580 460,2640 500,2700" 
             fill="none" 
             stroke="black" 
             strokeWidth="2" 
@@ -602,11 +662,26 @@ const Services = () => {
             containerRef={containerRef}
           />
 
+          <TagCard 
+            number="06"
+            title="Lung Cancer AI Detection System | Final Year Project"
+            text="End-to-end CAD pipeline for lung carcinoma on 188K+ PET/CT scans (TCIA). A PyTorch dual-head CNN localizes tumors and classifies 4 subtypes at 92.5% accuracy and 91.77% F1, served via a FastAPI dashboard with bounding-box overlays."
+            image={lungCancerAiImg}
+            architectureAction={() => setArchModalKey('lungai')}
+            liveLink="https://lungai.chhavibuilds.in/"
+            liveLinkText="Lung Cancer AI"
+            className="md:absolute md:top-[2250px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-4"
+            aosType="fade-right"
+            aosDelay="600"
+            pathLength={pathLength}
+            containerRef={containerRef}
+          />
+
           {/* Hand-drawn end text */}
           <div 
             data-aos="fade-in" 
-            data-aos-delay="600"
-            className="hidden md:block absolute top-[2220px] left-[55%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            data-aos-delay="700"
+            className="hidden md:block absolute top-[2670px] left-[55%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             Ready to be delivered!
           </div>
