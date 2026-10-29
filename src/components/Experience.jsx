@@ -48,6 +48,15 @@ const carelonProjects = [
     badgeColor: 'text-rose-400 bg-rose-500/10 border-rose-500/20',
     description: 'Metadata-driven Medicaid claims search featuring strict schema validation, server pagination, and dynamic data retrieval.',
     tech: ['Angular', 'Spring Boot', 'Oracle', 'MongoDB']
+  },
+  {
+    id: 'impact-recognition',
+    title: 'Monthly Connect & Leadership Recognition',
+    icon: '🏅',
+    badge: '250 IMPACT Points',
+    badgeColor: 'text-amber-400 bg-amber-500/10 border-amber-500/20',
+    description: 'Awarded 250 IMPACT Points for leadership and organizational excellence by organizing the Monthly Connect for 50+ onshore & offshore participants, driving alignment on project progress, delivery milestones, and engineering best practices.',
+    tech: ['Cross-Functional Leadership', 'Delivery Alignment', 'Engineering Practices', 'Stakeholder Management']
   }
 ];
 
@@ -147,21 +156,6 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Key Milestone / Recognition Callout */}
-            <div className="bg-gradient-to-r from-rose-950/40 to-transparent border-l-4 border-rose-500 rounded-r-2xl p-4 sm:p-5 flex flex-col gap-3">
-              <div className="flex items-start gap-3.5">
-                <span className="text-2xl shrink-0 mt-0.5">🏅</span>
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                  Organized the <strong className="text-white font-semibold">Monthly Connect</strong> for 50+ onshore & offshore participants, driving alignment on project progress, delivery milestones, and engineering best practices.
-                </p>
-              </div>
-              <div className="flex justify-end w-full">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl border border-rose-500/40 bg-rose-500/10 text-rose-300 text-xs sm:text-sm font-medium shadow-[0_0_12px_rgba(244,63,94,0.15)]">
-                  <span>🏆</span>
-                  <span>Awarded <strong className="text-rose-400 font-bold">250 IMPACT Points</strong> for leadership and organizational excellence</span>
-                </div>
-              </div>
-            </div>
 
             {/* Sub-Projects: Neat & Tidy Grid */}
             <div className="space-y-4 pt-2">
@@ -172,10 +166,10 @@ const Experience = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {carelonProjects.map((project, idx) => (
+                {carelonProjects.map((project) => (
                   <div 
                     key={project.id}
-                    className={`bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-rose-500/30 rounded-2xl p-4 sm:p-5 transition-all duration-300 flex flex-col justify-between group ${idx === 4 ? 'md:col-span-2 md:max-w-xl md:mx-auto w-full' : ''}`}
+                    className="bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-rose-500/30 rounded-2xl p-4 sm:p-5 transition-all duration-300 flex flex-col justify-between group"
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2 mb-2.5">
