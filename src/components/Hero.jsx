@@ -82,7 +82,7 @@ const Hero = () => {
             data-aos-delay="200"
             className="text-white text-sm md:text-lg font-medium mb-8 max-w-md drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
           >
-            I build scalable web applications and AI-powered systems using Java, Spring Boot, Python, React and Angular.
+            I build scalable web applications and AI-powered systems using Python, Fast API, Java, Spring Boot, React and Angular.
           </p>
 
           {/* Buttons */}
