@@ -122,22 +122,18 @@ const Experience = () => {
           </div>
 
           {/* Quick Metrics Bar */}
-          <div data-aos="fade-left" className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div data-aos="fade-left" className="grid grid-cols-3 gap-3">
             <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 rounded-2xl px-4 py-3 text-center transition-all">
               <div className="text-xl font-black text-white">2+ <span className="text-xs font-normal text-rose-400">YOE</span></div>
               <div className="text-[11px] text-gray-400 font-medium">Experience</div>
             </div>
             <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 rounded-2xl px-4 py-3 text-center transition-all">
-              <div className="text-xl font-black text-white">5+</div>
+              <div className="text-xl font-black text-white">7+</div>
               <div className="text-[11px] text-gray-400 font-medium">Enterprise Tools</div>
             </div>
             <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 rounded-2xl px-4 py-3 text-center transition-all">
               <div className="text-xl font-black text-white">5K+</div>
               <div className="text-[11px] text-gray-400 font-medium">Files/Mo Processed</div>
-            </div>
-            <div className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 rounded-2xl px-4 py-3 text-center transition-all shadow-[0_0_20px_rgba(244,63,94,0.1)]">
-              <div className="text-xl font-black text-rose-400">250</div>
-              <div className="text-[11px] text-gray-400 font-medium">IMPACT Points</div>
             </div>
           </div>
         </div>
