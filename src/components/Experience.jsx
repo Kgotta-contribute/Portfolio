@@ -148,11 +148,19 @@ const Experience = () => {
             </div>
 
             {/* Key Milestone / Recognition Callout */}
-            <div className="bg-gradient-to-r from-rose-950/40 to-transparent border-l-4 border-rose-500 rounded-r-2xl p-4 sm:p-5 flex items-start gap-3.5">
-              <span className="text-2xl shrink-0 mt-0.5">🏅</span>
-              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                Organized the <strong className="text-white font-semibold">TDM Monthly Connect</strong> for 50+ onshore & offshore participants, driving alignment on project progress, delivery milestones, and engineering best practices. Awarded <strong className="text-rose-400 font-bold">250 IMPACT Points</strong> for leadership and organizational excellence.
-              </p>
+            <div className="bg-gradient-to-r from-rose-950/40 to-transparent border-l-4 border-rose-500 rounded-r-2xl p-4 sm:p-5 flex flex-col gap-3">
+              <div className="flex items-start gap-3.5">
+                <span className="text-2xl shrink-0 mt-0.5">🏅</span>
+                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                  Organized the <strong className="text-white font-semibold">Monthly Connect</strong> for 50+ onshore & offshore participants, driving alignment on project progress, delivery milestones, and engineering best practices.
+                </p>
+              </div>
+              <div className="flex justify-end w-full">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl border border-rose-500/40 bg-rose-500/10 text-rose-300 text-xs sm:text-sm font-medium shadow-[0_0_12px_rgba(244,63,94,0.15)]">
+                  <span>🏆</span>
+                  <span>Awarded <strong className="text-rose-400 font-bold">250 IMPACT Points</strong> for leadership and organizational excellence</span>
+                </div>
+              </div>
             </div>
 
             {/* Sub-Projects: Neat & Tidy Grid */}
