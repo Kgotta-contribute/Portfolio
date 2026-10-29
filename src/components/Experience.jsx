@@ -36,7 +36,7 @@ const carelonProjects = [
     title: 'Claims Inquiry Assistant — AI Summarization & Reasoning Gateway',
     icon: '⚡',
     badge: 'GenAI',
-    badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20 shadow-[0_0_12px_rgba(16,185,129,0.15)]',
+    badgeColor: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20 shadow-[0_0_12px_rgba(6,182,212,0.15)]',
     description: 'Engineered an asynchronous FastAPI claims intelligence assistant powered by GPT-4o for automated claim summarization and policy reasoning, backed by Redis caching and a modular Horizon LLM gateway enabling zero-downtime model switching.',
     impact: [
       '50% cut in manual claim review time at 96% accuracy',
