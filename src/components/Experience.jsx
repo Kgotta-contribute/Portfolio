@@ -47,12 +47,16 @@ const carelonProjects = [
   },
   {
     id: 'cvs',
-    title: 'CVS Data Lake — Data Exploration Platform',
+    title: 'CVS Data Lake — Full-Stack Data Exploration Platform',
     icon: '🌊',
     badge: 'Enterprise Data',
     badgeColor: 'text-teal-400 bg-teal-500/10 border-teal-500/20',
-    description: 'Metadata-driven healthcare search engine with dynamic filters, automated SQL generation, and high-throughput REST APIs.',
-    tech: ['Angular', 'Spring Boot', 'Oracle', 'JDBC', 'RxJS']
+    description: 'Developed a full-stack healthcare data-search platform using Angular and Spring Boot, unifying reactive search forms and dynamic filters across 4 data domains (member, claim, prescription, opportunity) spanning 7 backend tables and 30+ configurable output/search columns, with paginated results at 20 records/page.',
+    impact: [
+      'Engineered a metadata-driven dynamic SQL generation engine with source-system mapping and configurable result columns, eliminating hardcoded queries across all 7 tables',
+      'Added frontend validation and debounced interactions to cut redundant search calls'
+    ],
+    tech: ['Angular', 'Spring Boot', 'Oracle', 'JDBC', 'RxJS', 'SQL Generation']
   },
   {
     id: 'edp',
@@ -60,8 +64,12 @@ const carelonProjects = [
     icon: '🔍',
     badge: 'Search & Analytics',
     badgeColor: 'text-amber-400 bg-amber-500/10 border-amber-500/20',
-    description: 'Enterprise search architecture with multi-criteria dynamic query builder and low-latency reactive UI.',
-    tech: ['Angular', 'Spring Boot', 'Oracle', 'JDBC', 'RxJS']
+    description: 'Built a full-stack enterprise sales-search application using Angular and Spring Boot, supporting ID-based and advanced multi-criteria search across 30+ dynamic search fields, with reactive forms, conditional validation, pagination, and dynamic result rendering.',
+    impact: [
+      'Engineered a metadata-driven SQL generation layer (Oracle/JDBC) that dynamically resolves tables, columns, aliases, and query conditions with zero hardcoded logic',
+      'Enabled environment-specific database connectivity across dev/test/prod environments'
+    ],
+    tech: ['Angular', 'Spring Boot', 'Oracle', 'JDBC', 'RxJS', 'Reactive Forms']
   },
   {
     id: 'spider',
@@ -69,17 +77,25 @@ const carelonProjects = [
     icon: '📦',
     badge: 'Distributed Systems',
     badgeColor: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
-    description: 'High-volume batch contract-processing platform with automated job scheduling, error retries, and live notifications.',
-    tech: ['Angular', 'Spring Boot', 'Oracle', 'Quartz', 'DB2']
+    description: 'Developed a full-stack contract-republish application adopted by 4,000–5,000 monthly users using Angular and Spring Boot, supporting single/bulk workflows, Excel uploads, validation, task tracking, and paginated task history with pass/fail/waiting states.',
+    impact: [
+      'Engineered Quartz-based scheduled validation with DB2 integration, implementing task/subtask lifecycle management and retry/retrigger workflows',
+      'Integrated live status monitoring and automated email notifications to cut manual follow-up on failed batch jobs'
+    ],
+    tech: ['Angular', 'Spring Boot', 'Quartz Scheduler', 'DB2', 'Oracle', 'Batch Processing']
   },
   {
     id: 'claims',
-    title: 'Claims Medicaid — Metadata Search Module',
+    title: 'Claims Medicaid — Metadata-Driven Search Module',
     icon: '📋',
     badge: 'Healthcare Search',
     badgeColor: 'text-rose-400 bg-rose-500/10 border-rose-500/20',
-    description: 'Metadata-driven Medicaid claims search featuring strict schema validation, server pagination, and dynamic data retrieval.',
-    tech: ['Angular', 'Spring Boot', 'Oracle', 'MongoDB']
+    description: 'Developed a full-stack Medicaid claims-search module using Angular and Spring Boot, combining dynamic MongoDB aggregation with SQL-based querying, dynamic search criteria, validation, and environment-specific data retrieval.',
+    impact: [
+      'Implemented metadata-driven MongoDB aggregation pipelines and integrated DAAS/GraphQL APIs for dynamic filtering, projection, and claims data retrieval',
+      'Substantially reduced custom query code required per new search use case'
+    ],
+    tech: ['Angular', 'Spring Boot', 'MongoDB Aggregation', 'GraphQL / DAAS', 'Oracle', 'SQL']
   },
   {
     id: 'impact-recognition',
