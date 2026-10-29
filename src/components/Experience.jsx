@@ -10,8 +10,13 @@ const carelonProjects = [
     icon: '🎙️',
     badge: 'GenAI & RAG',
     badgeColor: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20',
-    description: 'Scalable AI transcription and conversational RAG platform processing 5K+ files/month with 97.5% speaker accuracy.',
-    tech: ['React', 'FastAPI', 'Python', 'AWS S3', 'SQS', 'MongoDB']
+    description: 'Architected an enterprise transcription and conversational RAG platform on an asynchronous S3-SQS-MongoDB pipeline with Python worker consumers, secured via Protegrity AES encryption, Okta SSO, and JWT authorization across Docker and Kubernetes clusters.',
+    impact: [
+      '97.5% transcription & diarization accuracy (from 82%) via VAD-guided FFmpeg chunking and timestamp merging, cutting turnaround by ~95%',
+      'Scaled to 5,000+ users across 30+ teams, reliably processing 5,000+ files monthly on resilient queue consumers with retry semantics',
+      '2,000+ monthly active users and 6,000+ queries on grounded multi-turn RAG chat, enforced by dual-pass MIME validation on 250 MB payloads'
+    ],
+    tech: ['React 19', 'TypeScript', 'FastAPI', 'Python', 'AWS S3', 'SQS', 'MongoDB', 'Kubernetes', 'Docker', 'Okta SSO']
   },
   {
     id: 'hr-policy-rag',
