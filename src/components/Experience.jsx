@@ -41,7 +41,7 @@ const carelonProjects = [
     impact: [
       '50% cut in manual claim review time at 96% accuracy',
       '40% lower API latency while scaling to 2× request throughput',
-      'Honored with the Impact Award for architectural excellence'
+      'Honored with the Impact Award for technical leadership'
     ],
     tech: ['FastAPI', 'GPT-4o', 'Redis Caching', 'Async / Event-Driven', 'Horizon Gateway', 'Zero-Downtime']
   },
