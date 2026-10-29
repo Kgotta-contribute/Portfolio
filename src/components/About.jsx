@@ -264,19 +264,17 @@ const About = () => {
                 ))}
               </div>
 
-              {/* Download Resume Button */}
-              <a 
-                href="/Chhavi_Verma_Resume.pdf"
-                download="Chhavi_Verma_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-xl border border-rose-500/50 hover:border-rose-500 bg-rose-500/10 hover:bg-rose-500/25 text-rose-300 hover:text-white font-bold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(244,63,94,0.15)] group cursor-pointer"
+              {/* Download Resume Button (Disabled) */}
+              <button 
+                type="button"
+                disabled
+                className="w-full py-3.5 rounded-xl border border-white/10 bg-white/5 text-gray-500 font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 cursor-not-allowed select-none opacity-60"
               >
-                <svg className="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
                 Download Resume
-              </a>
+              </button>
             </div>
 
             {/* Education Card */}
