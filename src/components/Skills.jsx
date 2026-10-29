@@ -36,7 +36,7 @@ const skillCategories = [
     borderColor: 'border-pink-500/35 hover:border-pink-500/70',
     shadowGlow: 'hover:shadow-[0_0_25px_rgba(244,114,182,0.18)]',
     badgeHover: 'hover:bg-pink-500/20 hover:text-white',
-    skills: ['LangChain', 'HuggingFace', 'LLM Models', 'NLP', 'LLM Agents', 'Scikit-learn']
+    skills: ['LangChain', 'HuggingFace', 'LLM Models', 'NLP', 'LangGraph', 'LLM Agents', 'Scikit-learn']
   },
   {
     title: 'Tools & Cloud',
