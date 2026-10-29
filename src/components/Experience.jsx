@@ -14,6 +14,33 @@ const carelonProjects = [
     tech: ['React', 'FastAPI', 'Python', 'AWS S3', 'SQS', 'MongoDB']
   },
   {
+    id: 'hr-policy-rag',
+    title: 'HR Policy Intelligence — Multimodal Agentic Assistant',
+    icon: '🤖',
+    badge: 'Multimodal GenAI & RAG',
+    badgeColor: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20 shadow-[0_0_12px_rgba(6,182,212,0.15)]',
+    description: 'Built a production-grade enterprise HR policy assistant with LLaMA-3.3-70B, Qdrant, and LangGraph, utilizing multimodal RAG and hexagonal architecture with swappable adapter ports across PDFs and OCR-scanned documents.',
+    impact: [
+      '+35% response relevance & 80% reduction in manual policy lookup effort',
+      '+30% expanded knowledge coverage & 2× active user adoption via SSO integration'
+    ],
+    tech: ['LLaMA-3.3-70B', 'Qdrant', 'LangGraph', 'Multimodal RAG', 'Hexagonal Arch', 'FastAPI', 'SSO']
+  },
+  {
+    id: 'claims-inquiry-assistant',
+    title: 'Claims Inquiry Assistant — AI Summarization & Reasoning Gateway',
+    icon: '⚡',
+    badge: 'GenAI',
+    badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20 shadow-[0_0_12px_rgba(16,185,129,0.15)]',
+    description: 'Engineered an asynchronous FastAPI claims intelligence assistant powered by GPT-4o for automated claim summarization and policy reasoning, backed by Redis caching and a modular Horizon LLM gateway enabling zero-downtime model switching.',
+    impact: [
+      '50% cut in manual claim review time at 96% accuracy',
+      '40% lower API latency while scaling to 2× request throughput',
+      'Honored with the Impact Award for architectural excellence'
+    ],
+    tech: ['FastAPI', 'GPT-4o', 'Redis Caching', 'Async / Event-Driven', 'Horizon Gateway', 'Zero-Downtime']
+  },
+  {
     id: 'cvs',
     title: 'CVS Data Lake — Data Exploration Platform',
     icon: '🌊',
@@ -188,6 +215,23 @@ const Experience = () => {
                       <p className="text-gray-400 text-xs sm:text-[13px] mt-2 leading-relaxed">
                         {project.description}
                       </p>
+
+                      {project.impact && (
+                        <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+                          <div className="text-[11px] font-mono font-bold text-rose-300 tracking-wide flex items-center gap-1.5">
+                            <span>📈</span>
+                            <span>Measurable Impact</span>
+                          </div>
+                          <ul className="space-y-1 pl-1">
+                            {project.impact.map((point, pIdx) => (
+                              <li key={pIdx} className="text-gray-300 text-[11px] sm:text-xs leading-relaxed flex items-start gap-1.5">
+                                <span className="text-emerald-400 mt-0.5">•</span>
+                                <span>{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
 
                     {/* Clean Tech Pills */}
